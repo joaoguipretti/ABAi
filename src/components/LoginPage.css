@@ -1,0 +1,32 @@
+/* LoginPage.css */
+.login-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(203,203,203,1) 100%);
+}
+
+.fca-logo {
+    width: 700px; /* Defina o tamanho desejado para o logo */
+}
+
+.login-button {
+    padding: 10px 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #c30000;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.login-button:hover {
+    background-color: #7a7a7a;
+    color: #c30000;
+}

@@ -1,0 +1,31 @@
+/* NavBar.css */
+
+.navbar {
+    height: 100vh;
+    width: 100px;
+    position: fixed;
+    top: 0;
+    left: 0; /* Defina a posição como 0 para sempre mostrar a navbar */
+    background: rgb(158,0,0);
+    background: linear-gradient(0deg, rgba(158,0,0,1) 0%, rgba(255,0,0,1) 100%);
+    overflow-x: hidden;
+    padding-top: 30px;
+    text-align: start;
+    text-align: center;
+  }
+  
+  .toggle-button {
+
+    background-color: transparent; /* Removendo o fundo */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 30px;
+  }
+  
+  .toggle-button:hover {
+    color: black;
+  }
+  

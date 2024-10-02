@@ -1,0 +1,145 @@
+.homepage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 60px; /* Espaço para o footer */
+
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #051876;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra 3D na parte de baixo */
+  }
+  
+
+.search-input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 0px solid black;
+}
+
+.navbar-buttons {
+    display: flex;
+    gap: 10px;
+    margin-right: 30px;
+}
+
+.navbar-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #051876;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-button:hover {
+    background-color: #444;
+}
+
+.cards-table {
+    width: 90%;
+    margin-top: 20px;
+}
+
+.cards-table table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cards-table th, .cards-table td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.cards-table th {
+    background-color: #051876;
+    font-weight: bold;
+    
+}
+
+.cards-table tr {
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+    
+}
+
+.cards-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+.cards-table tr:last-child {
+    border-bottom: none;
+}
+
+.cards-table td {
+    border-right: 1px solid #ddd;
+    cursor: pointer;
+
+}
+
+.cards-table td:last-child {
+    border-right: none;
+}
+
+.logofca {
+    text-align: start;
+    margin-left: 20px;
+}
+
+.logofca img {
+    max-width: 50px; /* Ajuste conforme necessário */
+    margin-left: 80px;
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 0px;
+    background-color: #f5f5f5;
+    color: rgb(0, 0, 0);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 4px 6px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra 3D na parte de baixo */
+  }
+
+  @media (max-width: 1920px) {
+    .navbar {
+        width: 100%;
+    }
+
+    .logofca {
+        text-align: center;
+        width: 35%;
+    }
+
+    .logofca img {
+        margin-left: 0;  /* Centraliza a logo */
+    }
+
+    .search-input {
+        margin-left: -395px;  /* Remove o deslocamento negativo */
+        width: 30%;  /* Expande o campo de pesquisa */
+    }
+
+    .navbar-buttons {
+        margin-right: 0;
+        justify-content: end;
+        margin-right: 30px;
+        width: 100%;
+    }
+}

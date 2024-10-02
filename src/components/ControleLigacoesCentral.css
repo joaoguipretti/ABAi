@@ -1,0 +1,67 @@
+.container {
+  max-width: 100%;
+  padding: 20px;
+  border-radius: 10px; /* Adiciona bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao contêiner */
+  background-color: #f9f9f9; /* Cor de fundo mais clara */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px; /* Aumenta a margem inferior do título */
+  color: #333;
+}
+
+button.voltar {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 30px; /* Ajusta o espaço abaixo do botão */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: background-color 0.3s; /* Transição suave para hover */
+}
+
+button.voltar:hover {
+  background-color: #0056b3;
+}
+
+.input-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px; /* Aumenta a margem inferior do campo de busca */
+}
+
+input[type="text"] {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-right: 10px; /* Espaço à direita do campo de busca */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px; /* Aumenta o padding nas células da tabela */
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+td {
+  background-color: #fff;
+}
