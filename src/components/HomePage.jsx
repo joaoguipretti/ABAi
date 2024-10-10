@@ -4,7 +4,7 @@ import { PublicClientApplication } from '@azure/msal-browser';
 import InputMask from 'react-input-mask';
 import './Modal.css';
 import './HomePage.css';
-import logo from './logo.png'; // Importe o seu logo aqui
+import logo from './logonegativo.png'; // Importe o seu logo aqui
 
 const config = {
     auth: {
@@ -467,7 +467,7 @@ function HomePage() {
         <div className="homepage">
             <div className="navbar">
                 <div className="logofca">
-                    {/* <img src={logo} alt="FCA Logo" className="fca-logofca"/> */}
+                    <img src={logo} alt="FCA Logo" className="fca-logofca"/>
                     
                 </div>
 
@@ -479,16 +479,25 @@ function HomePage() {
                     onChange={handleSearchChange}
                 />
 
-                <div className="navbar-buttons">
-                    {/* Exibe o botão "Adicionar Card" somente para usuários com cargos "INSIDE_SALES" ou "ADM" */}
-                    {(userRole === 'INSIDE_SALES' || userRole === 'ADM') && (
-                        <button className="navbar-button" onClick={openModal}>Adicionar Card</button>
-                    )}
-                    <button className="navbar-button" onClick={handleLogout}>Logout</button>
-                    {userRole === 'ADM' && (
-                        <button className="navbar-button" onClick={handlePainel}>Painel ADM</button>
-                    )}
-                </div>
+<div className="navbar-buttons">
+            {/* Exibe o botão "Adicionar Card" somente para usuários com cargos "INSIDE_SALES" ou "ADM" */}
+            {(userRole === 'INSIDE_SALES' || userRole === 'ADM') && (
+                <button className="navbar-button" onClick={openModal}>Adicionar Card</button>
+            )}
+            <button className="navbar-button" onClick={handleLogout}>Logout</button>
+            {userRole === 'ADM' && (
+                <>
+                    <button className="navbar-button" onClick={handlePainel}>Painel ADM</button>
+                    {/* Novo botão para /controle-ligacoes-central */}
+                    <button 
+                        className="navbar-button" 
+                        onClick={() => navigate('/controle-ligacoes-central')}
+                    >
+                        Controle Ligações
+                    </button>
+                </>
+            )}
+        </div>
 
             </div>
 

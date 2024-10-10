@@ -77,6 +77,8 @@ sql.connect(dbConfig).then(pool => {
         return res.status(401).json({ message: 'Token não fornecido' });
     }
 
+     // Exibe o token no console para depuração
+     console.log('Token recebido:', token);
     jwt.verify(token.split(' ')[1], 'chave_secreta', (err, decoded) => {
         if (err) {
             return res.status(401).json({ message: 'Token inválido' });
@@ -349,6 +351,30 @@ app.put('/editarCard/:cardId', verifyToken, async (req, res) => {
     }
 });
 
+app.delete('/excluirCard/:cardId', verifyToken, async (req, res) => {
+  const cardId = req.params.cardId;
+
+  try {
+    // Primeiro, exclua os registros relacionados na tabela `card_statuses`
+    await pool.request()
+      .input('cardId', sql.Int, cardId)
+      .query('DELETE FROM card_statuses WHERE card_id = @cardId');
+
+    // Depois, exclua o card
+    const result = await pool.request()
+      .input('cardId', sql.Int, cardId)
+      .query('DELETE FROM cards WHERE id = @cardId');
+
+    if (result.rowsAffected[0] === 0) {
+      return res.status(404).json({ error: 'Card não encontrado' });
+    }
+
+    res.status(200).json({ message: 'Card excluído com sucesso' });
+  } catch (err) {
+    console.error('Erro ao excluir o card:', err);
+    res.status(500).json({ error: 'Erro interno do servidor' });
+  }
+});
 
 
   // Rota para buscar todas as ligações

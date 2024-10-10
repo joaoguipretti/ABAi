@@ -13,16 +13,17 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: #051876;
+    background-color: #3b3b3b;
     color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra 3D na parte de baixo */
-  }
-  
+}
 
 .search-input {
+    flex: 1; /* Permite que a barra de pesquisa cresça e ocupe espaço disponível */
     padding: 10px;
     border-radius: 5px;
     border: 0px solid black;
+    margin-right: 20px; /* Espaço entre a barra de pesquisa e os botões da navbar */
 }
 
 .navbar-buttons {
@@ -36,7 +37,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #051876;
+    background-color: #3b3b3b;
     color: white;
     transition: background-color 0.3s ease;
 }
@@ -66,7 +67,7 @@
 }
 
 .cards-table th {
-    background-color: #051876;
+    background-color: #3b3b3b;
     font-weight: bold;
     
 }
@@ -96,21 +97,23 @@
 }
 
 .logofca {
-    text-align: start;
-    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    margin-left: 90px;
 }
 
 .logofca img {
-    max-width: 50px; /* Ajuste conforme necessário */
-    margin-left: 80px;
+    max-width: 50px;
+    margin-right: 20px; /* Espaço entre o logo e a barra de pesquisa */
+    
 }
 
 .footer {
     width: 100%;
     text-align: center;
     padding: 0px;
-    background-color: #f5f5f5;
-    color: rgb(0, 0, 0);
+    background-color: #3b3b3b;
+    color: rgb(255, 255, 255);
     position: fixed;
     bottom: 0;
     left: 0;

@@ -52,7 +52,7 @@
 }
 
 .modal-input-group-half {
-    flex: 0 0 48%; /* Cada grupo ocupa cerca de metade da linha */
+    flex: 0 0 30%; /* Cada grupo ocupa cerca de metade da linha */
     display: flex;
     flex-direction: column;
 }
